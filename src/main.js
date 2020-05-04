@@ -1,11 +1,11 @@
 const Game = require("../lib");
 const Player = require("../lib/Player");
-const game = Game;
 var createPlayer = (function createPlayer() {
-  game.state.entities = game.state.entities || {};
-  game.state.entities.player = new Player(
-    game,
-    game.constants.width / 2,
-    game.constants.height - 100
+  Game.state.entities = Game.state.entities || {};
+  Game.state.entities.player = new Player(
+    Game,
+    Game.constants.width / 2,
+    Game.constants.height - 100
   );
+  Game.state.entities.player;
 })();
