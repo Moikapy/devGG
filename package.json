@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "nodemon server.js",
     "dev:docker": "docker-compose up",
-    "start":"npm build && node server.js"  },
+    "start":"npm i && npm build && node server.js"  },
   "devDependencies": {
     "@babel/core": "^7.9.6",
     "@babel/preset-env": "^7.9.6",
