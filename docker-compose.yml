@@ -1,0 +1,11 @@
+version: '3'
+services:
+  dev:
+    build: .
+    command: bash -c "yarn dev"
+    volumes:
+      - .:/usr/src/app/
+      - /usr/src/app/node_modules
+    working_dir: /usr/src/app
+    ports:
+      - '3000:3000'
