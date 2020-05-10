@@ -1,3 +1,3 @@
 # devGG
 
-> Javascript Library for making simple games
+> A Simple Homebrew JS Game made with a Simple Homebrewed JS Library

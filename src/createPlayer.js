@@ -1,9 +1,13 @@
+
+var Game = require('../lib/core/game')
+const Player = require("./Player");
+
 module.exports = function createPlayer(id) {
-  const Player = require("../lib/Player");
+  console.log(Game)
   let player = new Player(
     id,
-    game.constants.width / 2,
-    game.constants.height / 2
+    Game.constants.width / 2,
+    Game.constants.height / 2
   );
-  game.state.entities.players.push(player);
+  Game.state.entities.players.push(player);
 };

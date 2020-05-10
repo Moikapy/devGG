@@ -7,16 +7,15 @@
   "private": false,
   "scripts": {
     "dev": "nodemon server.js",
-    "dev:ssr": "webpack --config webpack.ssr.js --watch",
-    "server": "node_modules/.bin/browser-refresh ./server.js"
+    "dev:docker": "docker-compose up"
   },
   "devDependencies": {
-    "nodemon": "^2.0.3",
     "@babel/core": "^7.9.6",
     "@babel/preset-env": "^7.9.6",
     "@babel/register": "^7.9.0",
     "babel-loader": "^8.1.0",
     "html-webpack-plugin": "^4.3.0",
+    "nodemon": "^2.0.3",
     "script-ext-html-webpack-plugin": "^2.1.4",
     "style-loader": "^0.23.1",
     "webpack": "^4.43.0",
@@ -27,6 +26,7 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
+    "moihelp": "^0.0.8",
     "next": "^9.3.6",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
