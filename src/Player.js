@@ -9,9 +9,9 @@ var mathHelpers = require("../lib/utils/utils.math.js");
 module.exports = function Player(id, x, y) {
   var player = Entity;
   // Create the initial state
+  player.id = id;
+  player.realmID = null;
   player.state = {
-    _id: id,
-    _realmID: null,
     hp: 100,
     moveSpeed: 1.5,
     position: {
@@ -19,13 +19,11 @@ module.exports = function Player(id, x, y) {
       y: y,
     },
   };
-
+  player.type = "player";
   // Set up any other constants
   var height = 20,
     width = 20,
-    color = player.state._id;
-
-  if (player.state._id == null) player.state._id = id;
+    color = player.id.toString().slice(0, 6);
   // Draw the player on the canvas
   player.render = function playerRender() {
     Game.context.fillStyle = "#" + color;
@@ -36,8 +34,7 @@ module.exports = function Player(id, x, y) {
       width,
       height
     );
-    let strokeColor = color - 10;
-    Game.context.strokeStyle = "#" + strokeColor;
+    Game.context.strokeStyle = "#" + color;
     Game.context.strokeRect(
       player.state.position.x - 2,
       player.state.position.y - 2,
